@@ -1,0 +1,13 @@
+extends application.pug
+
+block content
+  .container
+    form.content(action='/form', method='post')
+      div
+        input(type='text', name='firstname', placeholder=' Your first name')
+      div
+        input(type='text', name='lastname', placeholder=' Your last name')
+      div
+        input(type='email', name='email', placeholder=' Your email')
+      .button
+        button(type='submit') Add user
