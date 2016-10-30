@@ -1,0 +1,20 @@
+extends ../application.pug
+
+block content
+  .container
+    .row
+      .col-xs-6.offset-xs-3
+        h1.text-xs-center Add a New User
+        hr
+        form(action="/users" method="POST")
+          .form-group
+            label First Name:
+            input(type="text" name="firstname" placeholder="Ela" class="form-control")
+          .form-group
+            label Last Name:
+            input(type="text" name="lastname" placeholder="Korkmaz" class="form-control")
+          .form-group
+            label Email:
+            input(type="email" name="email" placeholder="ela@elakorkmaz.com" class="form-control")
+          .form-group
+            button(type="submit" class="btn btn-success btn-lg btn-block") Add User

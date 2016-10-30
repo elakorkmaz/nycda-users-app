@@ -33,11 +33,11 @@ app.get('/search/*', (req, res) => {
   res.render('search-result.pug', { results: results });
 });
 
-app.get('/form', (request, response) => {
-  response.render('form.pug');
+app.get('/users', (request, response) => {
+  response.render('users/new.pug');
 });
 
-app.post('/form', (request, response) => {
+app.post('/users', (request, response) => {
   userStore.push(request.body);
 
   response.redirect('/');
@@ -47,10 +47,6 @@ app.post('/form', (request, response) => {
       throw error;
     }
   });
-});
-
-app.get('/form', (req, res) => {
-  res.render('form.pug');
 });
 
 app.listen(3000, () => {
